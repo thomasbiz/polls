@@ -1,0 +1,9 @@
+extends layout.pug
+
+block content
+	h1 This is in index.pug
+	ul
+	each poll in polls
+		li
+			a(href='/poll/' + poll.slug) #{poll.title}
+	a(href='/poll/new') Create a poll

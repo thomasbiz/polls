@@ -1,0 +1,13 @@
+extends layout.pug
+
+block content
+	h1 Create a new poll 
+
+	form(method='POST', action='')
+		label(for='title') Title:
+		input(
+			type='text', 
+			placeholder='Who is your favorite Star Trek captain?', 
+			name='title'
+		)
+		button Submit

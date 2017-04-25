@@ -1,0 +1,14 @@
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/css/bootstrap.min.css')
+		script(src='/js/jquery-3.2.1.min.js')
+		script(src='/js/bootstrap.min.js')
+	body
+		h1= message
+		if user
+			p Logged in as #{ user.name }
+			a(class='button', href='/logout') Logout
+		else
+			a(class='button', href='/auth/google') Login with Google
+		block content
